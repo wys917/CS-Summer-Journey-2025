@@ -8,7 +8,7 @@
 
 **4.在新分支上进行你想要的操作**
 
-**5.把所有改动先加到“待提交区”**      `git add` .
+**5.把所有改动先加到“待提交区”**      `git add .`
 
 **6.提交，后面跟上简短的说明**     `git commit -m "whatever you want to note"`
 
@@ -26,4 +26,6 @@
 
 **7.把结果推送到云端**				`git push origin main`
 
-**8.一键部署网站**                    `mkdocs gh-deploy`
+**8.本地预览**                     `mkdocs serve`
+
+**9.一键部署网站**                 `mkdocs gh-deploy`
