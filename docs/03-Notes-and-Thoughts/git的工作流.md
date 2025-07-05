@@ -26,3 +26,4 @@
 
 **7.把结果推送到云端**				`git push origin main`
 
+**8.一键部署网站**                    `mkdocs gh-deploy`
