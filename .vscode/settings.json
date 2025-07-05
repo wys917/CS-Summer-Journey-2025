@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.v": "verilog",
+        "*.c": "c",
+        "leetcode94-the_inorder_traversal_of_a_binary_tree": "c"
+    }
+}
