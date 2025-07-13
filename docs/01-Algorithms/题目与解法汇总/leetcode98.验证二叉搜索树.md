@@ -1,4 +1,4 @@
-### leetcode98.验证二叉搜索树
+### 98.验证二叉搜索树
 
 一开始拿到这道题的时候，直接动手使用递归完成了，写下了以下错误代码：
 
@@ -35,6 +35,10 @@ bool isValidBST(struct TreeNode* root) {
 
 这段代码错误的原因很明显，只检查了当前节点与左右节点的大小关系，没有考虑其与更高节点的大小关系，因此没有通过部分测试点
 
+---
+
+
+
 经过思考后，想出了以下正确的递归，使用了一个辅助的递归函数，并传入了两个long类型的参数，即上下界。值得注意的是，第一次传入的root没有上下界的要求，所以需要利用`#include <limits.h>`中的`LONG_MIN`和`LONG_MAX`来获取最小值和最大值。并且这两个东西的数据类型是`long`，所以要注意是`long lower`而不是`int lower`
 
 ``` C
@@ -63,7 +67,11 @@ bool isValidBST(struct TreeNode* root){
 }
 ```
 
-写完上述代码后，leetcode已经通过了，于是我又研究了一下答案，希望能找到更好的实现方式。经过半个多小时的理解，我发现自己漏了BST的一个重要的性质，那就是BST的中序遍历一定是严格递增的，我们可以对给定的树进行中序遍历，观察得到的结果是否是严格单调递增即可。
+写完上述代码后，leetcode已经通过了，于是我又研究了一下答案，希望能找到更好的实现方式。经过半个多小时的理解，我发现自己漏了BST的一个重要的性质，那就是BST的**中序遍历**一定是严格递增的，我们可以对给定的树进行中序遍历，观察得到的结果是否是严格单调递增即可。
+
+---
+
+
 
 然后我就开始写了，结果写出了这样一大坨错误百出的代码，哎，果然还是要天天码才会有手感，四五天没写代码就变成这样了，伤心
 
@@ -144,9 +152,11 @@ bool isValidBST(struct TreeNode* root) {
 }
 ```
 
-然而上述的代码仍然存在缺陷，显然空间复杂度为*O*（N），这是我们不能接受的，于是我写出来了下面的代码：
+---
 
-## 这里还有问题，但是现在太晚了，明天再继续理解
+
+
+然而上述的代码仍然存在缺陷，显然空间复杂度为*O*（N），这是我们不能接受的，于是我写出来了下面的代码，值得注意的是，下面的1234步实际上就是中序遍历，如果还有疑问的话可以B站搜索`代码随想录`
 
 ```C
 // 这个辅助函数才是递归该有的样子
@@ -162,13 +172,11 @@ bool smart_recursive_check(struct TreeNode* node, struct TreeNode** prev) {
     }
 
     // 2. 处理当前节点（中序遍历的核心访问点）
-    // 如果prev不是NULL（即我们已经访问过节点了），并且前一个节点的值大于等于当前值
-    // 那么就不是BST
+
     if (*prev != NULL && (*prev)->val >= node->val) {
         return false;
     }
 
-    // 3. 访问完毕，把当前节点更新为“前一个节点”，为访问右子树做准备
     *prev = node;
 
     // 4. 最后递归检查右子树
@@ -183,5 +191,41 @@ bool isValidBST(struct TreeNode* root) {
 }
 ```
 
-## 后面还有一个迭代版，明天再写吧
+---
 
+
+
+这是迭代版，要记住！！！
+
+```C
+bool isValidBST(struct TreeNode* root) {
+    long long prev_val = LLONG_MIN;
+    struct TreeNode** stack = (struct TreeNode**)malloc(sizeof(struct TreeNode*) * 10001);
+    if (stack == NULL) return false;
+    int top = -1;
+    struct TreeNode* current = root;
+
+    // 看！这！里！
+    // 简洁！明了！正确！
+    while (current != NULL || top != -1) { //特别是这里的current!=NULL一定要注意！！
+        while (current != NULL) {
+            stack[++top] = current;
+            current = current->left;
+        }
+        current = stack[top--];
+        
+        if (current->val <= prev_val) {
+            free(stack);
+            return false;
+        }
+        
+        prev_val = current->val;
+        current = current->right;
+    }
+
+    free(stack);
+    return true;
+}
+```
+
+这道题花了我很长时间，说明我对一些基础的操作还是存在很大的问题的，要继续加油啊！！
