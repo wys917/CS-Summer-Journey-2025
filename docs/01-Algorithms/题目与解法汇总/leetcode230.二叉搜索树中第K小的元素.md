@@ -1,5 +1,18 @@
 # leetcode 230.二叉搜索树中第K小的元素
 
+!!! info "题目"
+    给定一个二叉搜索树的根节点 `root` ，和一个整数 `k` ，请你设计一个算法查找其中第 `k` 个最小元素（从 1 开始计数）。
+
+    **示例 1：**
+    ![alt text](https://assets.leetcode.com/uploads/2021/01/28/kthtree1.jpg)
+    > 输入：root = [3,1,4,null,2], k = 1
+    > 输出：1
+
+    **示例 2：**
+    ![alt text](https://assets.leetcode.com/uploads/2021/01/28/kthtree2.jpg)
+    > 输入：root = [5,3,6,2,4,null,null,1], k = 3
+    > 输出：3
+
 ## 第一种方法，新开数组：
 
 中序遍历这个树，将得到的结果储存到一个新的数组里，然后取他的第k个数，这种方法过于蠢笨，所以此处不演示。

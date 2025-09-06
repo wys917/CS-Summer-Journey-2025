@@ -1,5 +1,21 @@
 # leetcode.102二叉树的层序遍历
 
+!!! info "题目"
+    给你一个二叉树的根节点 `root` ，返回其节点值的 **层序遍历** 。 （即逐层地，从左到右访问所有节点）。
+
+    **示例 1:**
+    ![alt text](https://assets.leetcode.com/uploads/2021/02/19/tree_bfs.jpg)
+    > 输入：root = [3,9,20,null,null,15,7]
+    > 输出：[[3],[9,20],[15,7]]
+
+    **示例 2:**
+    > 输入：root = [1]
+    > 输出：[[1]]
+
+    **示例 3:**
+    > 输入：root = []
+    > 输出：[]
+
 ## 方法一，感觉很差劲 ：
 
 直接就忽略了树这个结构，直接把输入当成一个数组。由于我们有`returnsize`和`returnColumnSizes`这两个变量，所以我们可以遍历来算出节点的个数，然后顺序遍历root数组，每检测到一个非空节点就自增cnt，然后把该节点添加到`result[*returnsize_idx][(*returncolumnsizes)[i++]]`里，并且当`i=**returnColumnSizes`时就令`i=0`，`(*returnsize_idx)++`,一直循环直到`*returnsize_idx==*returnsize&&i==**returnColumnSizes.`显然，这种方法烂到爆炸，完全没有用树这种优秀的数据结构，菜鸟才会这样做
