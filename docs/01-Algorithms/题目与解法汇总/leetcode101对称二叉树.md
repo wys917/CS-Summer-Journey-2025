@@ -1,11 +1,11 @@
 # leetcode101对称二叉树
-![alt text](image-1.png)
+
 
 !!! info "题目"
     给你一个二叉树的根节点 `root` ， 检查它是否轴对称。
 
     **示例 1:**
-    ![alt text](image.png)
+    ![alt text](image-1.png)
     > 输入：root = [1,2,2,3,4,4,3]
     > 输出：true
 
