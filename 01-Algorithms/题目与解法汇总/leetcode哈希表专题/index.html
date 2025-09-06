@@ -958,6 +958,16 @@
 
 
 <h1 id="leetcode">Leetcode 哈希表专题</h1>
+<div class="admonition info">
+<p class="admonition-title">专题说明</p>
+<p>本页面汇总了与哈希表（Hash Table）相关的 LeetCode 经典题目，旨在通过一系列问题，深入理解哈希表的原理、应用场景及解题技巧。</p>
+<p><strong>核心思想：</strong>
+哈希表利用键值对（Key-Value）的映射关系，实现 O(1) 时间复杂度的快速查找、插入和删除。它是解决算法问题，特别是涉及查找、计数、去重等场景的利器。</p>
+<p><strong>包含题目：</strong>
+- <strong>字母异位词分组 (LeetCode 49):</strong> 学习如何将字符串通过排序或计数进行规范化，作为哈希表的键。
+- <strong>两数之和 (LeetCode 1):</strong> 体验哈希表最经典的用法——用空间换时间，将查找过程从 O(n) 降至 O(1)。
+- <strong>更多...</strong></p>
+</div>
 <h2 id="11">1.第1题</h2>
 <p>传统解法的时间复杂度为<code>O(n^2)</code>，效率低下，主要原因在于需要低效的遍历每一个可能的值，这就导致如果想要找的两个数都位于数组的结尾时需要遍历很多无效的数据。使用哈希表则非常方便，每次遍历到的数都会存入表中，哈希值相同的数据则会通过链表的形式存储，哈希值查找的时间复杂度为<code>O(1)</code>,链表寻找的时间复杂度为<code>O(n)</code>，所以总的时间复杂度为<code>O(n)</code>。另外在具体写代码的时候有一点需要重点注意，那就是每一次更新哈希表的时候，新加入的node的地址需要在函数内永久保存，所以要通过<code>malloc</code>在堆上建立而不是在栈上定义。</p>
 <p><code>node *snode=(node *)malloc(sizeof(node));</code>而不是<code>node snode</code>。</p>

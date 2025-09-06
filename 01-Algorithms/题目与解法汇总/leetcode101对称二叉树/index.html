@@ -864,8 +864,23 @@
 
 
 <h1 id="leetcode101">leetcode101对称二叉树</h1>
-<p><img alt="alt text" src="../image-1.png" />
-这道题主要就是找到合理的递归条件，为此我们需要对问题进行略微的转化，或者说等价替换：
+<p><img alt="alt text" src="../image-1.png" /></p>
+<div class="admonition info">
+<p class="admonition-title">题目</p>
+<p>给你一个二叉树的根节点 <code>root</code> ， 检查它是否轴对称。</p>
+<p><strong>示例 1:</strong>
+<img alt="alt text" src="../image.png" /></p>
+<blockquote>
+<p>输入：root = [1,2,2,3,4,4,3]
+输出：true</p>
+</blockquote>
+<p><strong>示例 2:</strong></p>
+<blockquote>
+<p>输入：root = [1,2,2,null,3,null,3]
+输出：false</p>
+</blockquote>
+</div>
+<p>这道题主要就是找到合理的递归条件，为此我们需要对问题进行略微的转化，或者说等价替换：
 <strong>判断一棵树是否对称</strong>  -&gt;  <strong>如何判断树A和树B是否互为镜像？</strong>
 如此一来就简单了，A和B 镜像需要满足三个条件：
 1.A和B的根节点的值相等
