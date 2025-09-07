@@ -1,6 +1,15 @@
-site_name: SYW's CS Summer Journey 2025 # 网站标题
+site_name: SYW's Computer Science Portfolio # 网站标题
+site_description: "A personal blog documenting my computer science journey."
+site_author: "SYW"
+
 theme:
     name: material # 使用 Material 主题
+    features:
+      - navigation.tabs
+      - navigation.sections
+      - search.suggest
+      - search.highlight
+      - content.code.copy
     font:
       text: Roboto
       code: Roboto Mono
@@ -11,7 +20,7 @@ theme:
     - scheme: slate
       toggle:
         icon: material/weather-sunny
-        name: Dark mode
+        name: Switch to light mode
       primary: green
       accent: deep purple
 
@@ -19,9 +28,38 @@ theme:
     - scheme: default
       toggle:
         icon: material/weather-night
-        name: Light mode
+        name: Switch to dark mode
       primary: blue
       accent: deep orange
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/wys917 # 请替换成你的 GitHub 用户名
+
+nav:
+  - Home: index.md
+  - Algorithms:
+    - 01-Algorithms/index.md
+    - 'Problem Solutions':
+      - 'LeetCode 101: Symmetric Tree': 01-Algorithms/题目与解法汇总/leetcode-101-对称二叉树.md
+      - 'LeetCode 102: Binary Tree Level Order Traversal': 01-Algorithms/题目与解法汇总/leetcode-102-二叉树的层序遍历.md
+      - 'LeetCode 141: Linked List Cycle': 01-Algorithms/题目与解法汇总/leetcode-141-环形链表.md
+      - 'LeetCode 206: Reverse Linked List': 01-Algorithms/题目与解法汇总/leetcode-206-反转链表.md
+      - 'LeetCode 21: Merge Two Sorted Lists': 01-Algorithms/题目与解法汇总/leetcode-21-合并两个有序链表.md
+      - 'LeetCode 230: Kth Smallest Element in a BST': 01-Algorithms/题目与解法汇总/leetcode-230-二叉搜索树中第K小的元素.md
+      - 'LeetCode 283: Move Zeroes': 01-Algorithms/题目与解法汇总/leetcode-283-移动零.md
+      - 'LeetCode 3: Longest Substring Without Repeating Characters': 01-Algorithms/题目与解法汇总/leetcode-3-无重复字符串的最长子串.md
+      - 'LeetCode 49: Group Anagrams': 01-Algorithms/题目与解法汇总/leetcode-49-字母异位词分组.md
+      - 'LeetCode 94: Binary Tree Inorder Traversal': 01-Algorithms/题目与解法汇总/leetcode-94-二叉树的中序遍历.md
+      - 'LeetCode 98: Validate Binary Search Tree': 01-Algorithms/题目与解法汇总/leetcode-98-验证二叉搜索树.md
+      - 'Hash Table Summary': 01-Algorithms/题目与解法汇总/leetcode-哈希表专题.md
+  - HPC:
+    - 'Lab 1: MiniCluster': 02-HPC/lab1-MiniCluster/lab1.md
+    - 'Lab 1: Reflection': 02-HPC/lab1-MiniCluster/reflection.md
+    - 'Lab 2: Vectorized Computation': 02-HPC/lab2-向量化计算/lab2.md
+  - Notes and Thoughts:
+    - 'Git Workflow': 03-Notes-and-Thoughts/git的工作流.md
 
 markdown_extensions:
   - attr_list
