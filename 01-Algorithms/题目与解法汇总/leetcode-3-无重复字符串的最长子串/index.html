@@ -6,6 +6,10 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="A personal blog documenting my computer science journey.">
+      
+      
+        <meta name="author" content="SYW">
       
       
       
@@ -20,7 +24,7 @@
     
     
       
-        <title>LeetCode 3: 无重复字符串的最长子串 - SYW's CS Summer Journey 2025</title>
+        <title>LeetCode 3: Longest Substring Without Repeating Characters - SYW's Computer Science Portfolio</title>
       
     
     
@@ -84,11 +88,9 @@
     
       
 
-  
-
-<header class="md-header md-header--shadow" data-md-component="header">
+<header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="SYW&#39;s CS Summer Journey 2025" class="md-header__button md-logo" aria-label="SYW's CS Summer Journey 2025" data-md-component="logo">
+    <a href="../../.." title="SYW&#39;s Computer Science Portfolio" class="md-header__button md-logo" aria-label="SYW's Computer Science Portfolio" data-md-component="logo">
       
   <img src="../../../assets/logo.jpg" alt="logo">
 
@@ -101,13 +103,13 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            SYW's CS Summer Journey 2025
+            SYW's Computer Science Portfolio
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              LeetCode 3: 无重复字符串的最长子串
+              LeetCode 3: Longest Substring Without Repeating Characters
             
           </span>
         </div>
@@ -120,9 +122,9 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="deep-purple"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="deep-purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
     
-      <label class="md-header__button md-icon" title="Dark mode" for="__palette_1" hidden>
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
       </label>
     
@@ -130,9 +132,9 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="deep-orange"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="deep-orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
     
-      <label class="md-header__button md-icon" title="Light mode" for="__palette_0" hidden>
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
       </label>
     
@@ -170,6 +172,8 @@
         </button>
       </nav>
       
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
@@ -195,6 +199,96 @@
       
         
           
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  
+  Algorithms
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../02-HPC/lab1-MiniCluster/lab1/" class="md-tabs__link">
+          
+  
+  
+  HPC
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../03-Notes-and-Thoughts/git%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%B5%81/" class="md-tabs__link">
+          
+  
+  
+  Notes and Thoughts
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
         
       
       <main class="md-main" data-md-component="main">
@@ -208,15 +302,17 @@
                     
 
 
+  
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="SYW&#39;s CS Summer Journey 2025" class="md-nav__button md-logo" aria-label="SYW's CS Summer Journey 2025" data-md-component="logo">
+    <a href="../../.." title="SYW&#39;s Computer Science Portfolio" class="md-nav__button md-logo" aria-label="SYW's Computer Science Portfolio" data-md-component="logo">
       
   <img src="../../../assets/logo.jpg" alt="logo">
 
     </a>
-    SYW's CS Summer Journey 2025
+    SYW's Computer Science Portfolio
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -233,7 +329,7 @@
   
   
   <span class="md-ellipsis">
-    欢迎来到我的2025暑期学习之旅
+    Home
     
   </span>
   
@@ -255,20 +351,28 @@
     
     
     
+      
+        
+        
+      
+      
+        
+      
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
   <span class="md-ellipsis">
-    01 Algorithms
+    Algorithms
     
   </span>
   
@@ -279,7 +383,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            01 Algorithms
+            Algorithms
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -318,20 +422,28 @@
     
     
     
+      
+      
+        
+          
+          
+        
+      
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
             
   
   
   <span class="md-ellipsis">
-    题目与解法汇总
+    Problem Solutions
     
   </span>
   
@@ -342,7 +454,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
-            题目与解法汇总
+            Problem Solutions
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -358,7 +470,7 @@
   
   
   <span class="md-ellipsis">
-    LeetCode 101: 对称二叉树
+    LeetCode 101: Symmetric Tree
     
   </span>
   
@@ -381,7 +493,7 @@
   
   
   <span class="md-ellipsis">
-    LeetCode 102: 二叉树的层序遍历
+    LeetCode 102: Binary Tree Level Order Traversal
     
   </span>
   
@@ -404,7 +516,7 @@
   
   
   <span class="md-ellipsis">
-    LeetCode 141: 环形链表
+    LeetCode 141: Linked List Cycle
     
   </span>
   
@@ -427,7 +539,7 @@
   
   
   <span class="md-ellipsis">
-    LeetCode 206: 反转链表-反转链表
+    LeetCode 206: Reverse Linked List
     
   </span>
   
@@ -450,7 +562,7 @@
   
   
   <span class="md-ellipsis">
-    LeetCode 21: 合并两个有序链表
+    LeetCode 21: Merge Two Sorted Lists
     
   </span>
   
@@ -473,7 +585,7 @@
   
   
   <span class="md-ellipsis">
-    LeetCode 230: 二叉搜索树中第 K 小的元素 leetcode 230.二叉搜索树中第K小的元素
+    LeetCode 230: Kth Smallest Element in a BST
     
   </span>
   
@@ -496,7 +608,7 @@
   
   
   <span class="md-ellipsis">
-    LeetCode 283: 移动零
+    LeetCode 283: Move Zeroes
     
   </span>
   
@@ -528,7 +640,7 @@
   
   
   <span class="md-ellipsis">
-    LeetCode 3: 无重复字符串的最长子串
+    LeetCode 3: Longest Substring Without Repeating Characters
     
   </span>
   
@@ -552,7 +664,7 @@
   
   
   <span class="md-ellipsis">
-    LeetCode 49: 字母异位词分组
+    LeetCode 49: Group Anagrams
     
   </span>
   
@@ -575,7 +687,7 @@
   
   
   <span class="md-ellipsis">
-    LeetCode 94: 二叉树的中序遍历
+    LeetCode 94: Binary Tree Inorder Traversal
     
   </span>
   
@@ -598,7 +710,7 @@
   
   
   <span class="md-ellipsis">
-    LeetCode 98: 验证二叉搜索树
+    LeetCode 98: Validate Binary Search Tree
     
   </span>
   
@@ -621,7 +733,7 @@
   
   
   <span class="md-ellipsis">
-    LeetCode 专题: 哈希表
+    Hash Table Summary
     
   </span>
   
@@ -657,6 +769,11 @@
     
     
     
+      
+      
+        
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -670,7 +787,7 @@
   
   
   <span class="md-ellipsis">
-    02 HPC
+    HPC
     
   </span>
   
@@ -681,45 +798,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            02 HPC
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
-        
-          
-          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    lab1 MiniCluster
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_1">
-            <span class="md-nav__icon md-icon"></span>
-            lab1 MiniCluster
+            HPC
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -735,7 +814,7 @@
   
   
   <span class="md-ellipsis">
-    Lab1: 迷你计算集群搭建及HPL性能测试
+    Lab 1: MiniCluster
     
   </span>
   
@@ -758,7 +837,7 @@
   
   
   <span class="md-ellipsis">
-    Reflection
+    Lab 1: Reflection
     
   </span>
   
@@ -768,52 +847,6 @@
   
 
               
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    Lab2 向量化计算
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_2">
-            <span class="md-nav__icon md-icon"></span>
-            Lab2 向量化计算
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
             
               
                 
@@ -827,7 +860,7 @@
   
   
   <span class="md-ellipsis">
-    Lab2: 基于AVX-512的整数量化矩阵乘法优化
+    Lab 2: Vectorized Computation
     
   </span>
   
@@ -844,14 +877,6 @@
     </li>
   
 
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
     
       
       
@@ -862,6 +887,11 @@
     
     
     
+    
+      
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -876,7 +906,7 @@
   
   
   <span class="md-ellipsis">
-    03 Notes and Thoughts
+    Notes and Thoughts
     
   </span>
   
@@ -887,7 +917,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
-            03 Notes and Thoughts
+            Notes and Thoughts
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -903,7 +933,7 @@
   
   
   <span class="md-ellipsis">
-    使用git的工作流程
+    Git Workflow
     
   </span>
   
@@ -1148,6 +1178,21 @@ right 指针不断向右移动，扩大窗口，每次都把新字符装进窗�
   
 </div>
       
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/wys917" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
     </div>
   </div>
 </footer>
@@ -1160,7 +1205,7 @@ right 指针不断向右移动，扩大窗口，每次都把新字符装进窗�
     
     
       
-      <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.sections", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../../assets/javascripts/bundle.56ea9cef.min.js"></script>
