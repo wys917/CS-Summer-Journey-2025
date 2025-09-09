@@ -8,7 +8,7 @@
 
 <div style="text-align: center; margin: 30px 0;">
   <a href="#featured-projects" style="background: #2196F3; color: white; padding: 12px 24px; text-decoration: none; border-radius: 5px; margin: 0 10px;">查看项目</a>
-  <a href="assets/resume.pdf" style="background: #4CAF50; color: white; padding: 12px 24px; text-decoration: none; border-radius: 5px; margin: 0 10px;">下载简历</a>
+  <a href="../assets/resume.pdf" style="background: #4CAF50; color: white; padding: 12px 24px; text-decoration: none; border-radius: 5px; margin: 0 10px;">下载简历</a>
   <a href="#contact" style="background: #FF9800; color: white; padding: 12px 24px; text-decoration: none; border-radius: 5px; margin: 0 10px;">联系我</a>
 </div>
 
