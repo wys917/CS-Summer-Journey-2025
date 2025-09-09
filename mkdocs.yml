@@ -55,9 +55,10 @@ nav:
       - 'LeetCode 98: Validate Binary Search Tree': 01-Algorithms/题目与解法汇总/leetcode-98-验证二叉搜索树.md
       - 'Hash Table Summary': 01-Algorithms/题目与解法汇总/leetcode-哈希表专题.md
   - HPC:
-    - 'Lab 1: MiniCluster': 02-HPC/lab1-MiniCluster/lab1.md
-    - 'Lab 1: Reflection': 02-HPC/lab1-MiniCluster/reflection.md
-    - 'Lab 2: Vectorized Computation': 02-HPC/lab2-向量化计算/lab2.md
+    - 'MiniCluster搭建及HPL测试': 02-HPC/迷你计算集群搭建及HPL性能测试/迷你计算集群搭建及HPL性能测试.md
+    - 'MiniCluster实验反思': 02-HPC/迷你计算集群搭建及HPL性能测试/reflection.md
+    - 'MPI+OpenMP混合并行BiCGSTAB': 02-HPC/基于MPI+OpenMP混合并行的BiCGSTAB算法实现与调优/README.md
+    - 'AVX-512矩阵乘法优化': 02-HPC/基于AVX-512的整数量化矩阵乘法优化/基于AVX-512的整数量化矩阵乘法优化.md
   - Notes and Thoughts:
     - 'Git Workflow': 03-Notes-and-Thoughts/git的工作流.md
 
