@@ -1,8 +1,8 @@
-# Lab1: 迷你计算集群搭建及HPL性能测试
+# 迷你计算集群搭建及HPL性能测试
 !!! info "提示"
     具体细节请点击下方按钮进入我的GitHub仓库查看
     
-    [-> GitHub 源码](https://github.com/wys917/My_HPC/tree/main/lab1){ .md-button .md-button--primary }
+    [-> GitHub 源码](https://github.com/wys917/My_HPC/tree/main/迷你计算集群搭建及HPL性能测试){ .md-button .md-button--primary }
 
 **实验者：** 苏易文 (学号: 3240103466)  
 **日期：** 2025年6月  
@@ -38,7 +38,7 @@
 ## 🏗️ 项目结构
 
 ```
-lab1/
+迷你计算集群搭建及HPL性能测试/
 ├── README.md                    # 项目说明文档
 ├── report/                      # 实验报告
 │   ├── report.md               # Markdown格式报告
