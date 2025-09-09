@@ -2,7 +2,7 @@
 !!! info "提示"
     具体细节请点击下方按钮进入我的GitHub仓库查看
     
-    [-> GitHub 源码](https://github.com/wys917/My_HPC/tree/main/迷你计算集群搭建及HPL性能测试){ .md-button .md-button--primary }
+    [-> GitHub 源码](https://github.com/wys917/My_HPC/tree/main/迷你集群搭建及HPL性能调优){ .md-button .md-button--primary }
 
 **实验者：** 苏易文 (学号: 3240103466)  
 **日期：** 2025年6月  
