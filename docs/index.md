@@ -8,7 +8,7 @@
 
 <div style="text-align: center; margin: 30px 0;">
   <a href="#featured-projects" style="background: #2196F3; color: white; padding: 12px 24px; text-decoration: none; border-radius: 5px; margin: 0 10px;">查看项目</a>
-  <a href="../assets/resume.pdf" style="background: #4CAF50; color: white; padding: 12px 24px; text-decoration: none; border-radius: 5px; margin: 0 10px;">下载简历</a>
+  <a href="assets/resume.pdf" style="background: #4CAF50; color: white; padding: 12px 24px; text-decoration: none; border-radius: 5px; margin: 0 10px;">下载简历</a>
   <a href="#contact" style="background: #FF9800; color: white; padding: 12px 24px; text-decoration: none; border-radius: 5px; margin: 0 10px;">联系我</a>
 </div>
 
@@ -19,6 +19,8 @@
 我是苏易文，一名从材料科学全力转向计算机科学的浙大学生。促使我做出这一决定的，是对"计算"本身力量的着迷——尤其是在一次实践中，我了解到字节跳动的工程师如何通过优化算法将网约车相关犯罪率降低20%，这让我深刻意识到代码背后承载的巨大社会价值。
 
 这段经历让我把目光聚焦于计算机底层系统，我坚信，只有掌握了操作系统、编译原理和计算机体系结构这些硬核知识，才能构建出真正高效、可靠的软件，去解决有价值的现实问题。
+
+目前，我已加入**王小航教授的LLM芯片与系统优化课题组**，在这里深入探索大语言模型的底层优化技术，从芯片架构到系统软件的全栈优化。
 
 ---
 
