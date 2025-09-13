@@ -1,6 +1,5 @@
 # 🔄 基于MPI+OpenMP混合并行的BiCGSTAB算法实现与调优
 
-[![Language](https://img.shields.io/badge/Language-C%2B%2B-blue.svg)](https://en.cppreference.com/)
 [![OpenMP](https://img.shields.io/badge/OpenMP-4.5+-green.svg)](https://www.openmp.org/)
 [![MPI](https://img.shields.io/badge/MPI-OpenMPI%204.0+-orange.svg)](https://www.open-mpi.org/)
 
@@ -171,26 +170,26 @@ BiCGSTAB (Biconjugate Gradient Stabilized) 是一种用于求解非对称线性�
 
 #### 算法步骤:
 
-1. $r_0 = b - \mathbf{A}x_0$
+1. $$r_0 = b - \mathbf{A}x_0$$
 2. Choose an arbitrary vector $\hat{r_0}$ such that $(\hat{r_0}, r_0)\ne 0$, eg. $\hat{r_0} = r_0$
-3. $\rho_0 = (\hat{r}_0, r_0)$
-4. $p_0 = r_0$
+3. $$\rho_0 = (\hat{r}_0, r_0)$$
+4. $$p_0 = r_0$$
 5. For $i = 1, 2, 3, \ldots$
-    1. $y = \mathbf{M^{-1}} p_{i-1}$
-    2. $v = \mathbf{A}{y}$
-    3. $\alpha = \rho_{i-1} / (\hat{r}_0, v)$
-    4. $h = x_{i-1} + \alpha y$
-    5. $s = r_{i-1} - \alpha v$
+    1. $$y = \mathbf{M^{-1}} p_{i-1}$$
+    2. $$v = \mathbf{A}y$$
+    3. $$\alpha = \rho_{i-1} / (\hat{r}_0, v)$$
+    4. $$h = x_{i-1} + \alpha y$$
+    5. $$s = r_{i-1} - \alpha v$$
     6. If $s$ is within the accuracy tolerance then $x_{i-1} = h$ and quit.
-    7. $z = \mathbf{M^{-1}} s$
-    8. $t = \mathbf{A}z$
-    9. $\omega = (t, s) / (t, t)$
-    10. $x_i = h + \omega z$
-    11. $r_i = s - \omega t$
+    7. $$z = \mathbf{M^{-1}} s$$
+    8. $$t = \mathbf{A}z$$
+    9. $$\omega = (t, s) / (t, t)$$
+    10. $$x_i = h + \omega z$$
+    11. $$r_i = s - \omega t$$
     12. If $r_i$ is within the accuracy tolerance then quit.
-    13. $\rho_i = (\hat{r}_0, r_i)$
-    14. $\beta = (\rho_i / \rho_{i-1}) (\alpha / \omega)$
-    15. $p_i = r_i + \beta (p_{i-1} - \omega v)$
+    13. $$\rho_i = (\hat{r}_0, r_i)$$
+    14. $$\beta = (\rho_i / \rho_{i-1}) (\alpha / \omega)$$
+    15. $$p_i = r_i + \beta (p_{i-1} - \omega v)$$
 
 ## 🛠️ 开发环境配置
 
@@ -214,18 +213,6 @@ export OMP_NUM_THREADS=48
 mpirun -np 2 ./bicgstab_solver
 ```
 
-
-
-**数据文件**：
-- 测试数据位于 `/river/hpc101/2025/lab4/data`
-- 可通过 `ln -s /river/hpc101/2025/lab4/data data` 引用
-- 提交时请勿包含数据文件
-
-
-
-## 📄 许可证
-
-本项目采用 MIT License 开源协议。
 
 ---
 
