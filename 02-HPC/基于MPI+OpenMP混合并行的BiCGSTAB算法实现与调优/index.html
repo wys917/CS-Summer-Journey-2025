@@ -1105,15 +1105,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#_15" class="md-nav__link">
-    <span class="md-ellipsis">
-      📄 许可证
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1468,15 +1459,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#_15" class="md-nav__link">
-    <span class="md-ellipsis">
-      📄 许可证
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1494,8 +1476,7 @@
 
 
 <h1 id="mpiopenmpbicgstab">🔄 基于MPI+OpenMP混合并行的BiCGSTAB算法实现与调优</h1>
-<p><a href="https://en.cppreference.com/"><img alt="Language" src="https://img.shields.io/badge/Language-C%2B%2B-blue.svg" /></a>
-<a href="https://www.openmp.org/"><img alt="OpenMP" src="https://img.shields.io/badge/OpenMP-4.5+-green.svg" /></a>
+<p><a href="https://www.openmp.org/"><img alt="OpenMP" src="https://img.shields.io/badge/OpenMP-4.5+-green.svg" /></a>
 <a href="https://www.open-mpi.org/"><img alt="MPI" src="https://img.shields.io/badge/MPI-OpenMPI%204.0+-orange.svg" /></a></p>
 <div class="admonition info">
 <p class="admonition-title">提示</p>
@@ -1713,29 +1694,61 @@
 </ul>
 <h2 id="bicgstab_1">📚 BiCGSTAB算法数学基础</h2>
 <h3 id="_12">算法描述</h3>
-<p>BiCGSTAB (Biconjugate Gradient Stabilized) 是一种用于求解非对称线性系统 $Ax = b$ 的Krylov子空间迭代方法。</p>
+<p>BiCGSTAB (Biconjugate Gradient Stabilized) 是一种用于求解非对称线性系统 <span class="arithmatex">\(Ax = b\)</span> 的Krylov子空间迭代方法。</p>
 <h4 id="_13">算法步骤:</h4>
 <ol>
-<li>$r_0 = b - \mathbf{A}x_0$</li>
-<li>Choose an arbitrary vector $\hat{r_0}$ such that $(\hat{r_0}, r_0)\ne 0$, eg. $\hat{r_0} = r_0$</li>
-<li>$\rho_0 = (\hat{r}_0, r_0)$</li>
-<li>$p_0 = r_0$</li>
-<li>For $i = 1, 2, 3, \ldots$<ol>
-<li>$y = \mathbf{M^{-1}} p_{i-1}$</li>
-<li>$v = \mathbf{A}{y}$</li>
-<li>$\alpha = \rho_{i-1} / (\hat{r}_0, v)$</li>
-<li>$h = x_{i-1} + \alpha y$</li>
-<li>$s = r_{i-1} - \alpha v$</li>
-<li>If $s$ is within the accuracy tolerance then $x_{i-1} = h$ and quit.</li>
-<li>$z = \mathbf{M^{-1}} s$</li>
-<li>$t = \mathbf{A}z$</li>
-<li>$\omega = (t, s) / (t, t)$</li>
-<li>$x_i = h + \omega z$</li>
-<li>$r_i = s - \omega t$</li>
-<li>If $r_i$ is within the accuracy tolerance then quit.</li>
-<li>$\rho_i = (\hat{r}_0, r_i)$</li>
-<li>$\beta = (\rho_i / \rho_{i-1}) (\alpha / \omega)$</li>
-<li>$p_i = r_i + \beta (p_{i-1} - \omega v)$</li>
+<li>
+<div class="arithmatex">\[r_0 = b - \mathbf{A}x_0\]</div>
+</li>
+<li>Choose an arbitrary vector <span class="arithmatex">\(\hat{r_0}\)</span> such that <span class="arithmatex">\((\hat{r_0}, r_0)\ne 0\)</span>, eg. <span class="arithmatex">\(\hat{r_0} = r_0\)</span></li>
+<li>
+<div class="arithmatex">\[\rho_0 = (\hat{r}_0, r_0)\]</div>
+</li>
+<li>
+<div class="arithmatex">\[p_0 = r_0\]</div>
+</li>
+<li>For <span class="arithmatex">\(i = 1, 2, 3, \ldots\)</span><ol>
+<li>
+<div class="arithmatex">\[y = \mathbf{M^{-1}} p_{i-1}\]</div>
+</li>
+<li>
+<div class="arithmatex">\[v = \mathbf{A}y\]</div>
+</li>
+<li>
+<div class="arithmatex">\[\alpha = \rho_{i-1} / (\hat{r}_0, v)\]</div>
+</li>
+<li>
+<div class="arithmatex">\[h = x_{i-1} + \alpha y\]</div>
+</li>
+<li>
+<div class="arithmatex">\[s = r_{i-1} - \alpha v\]</div>
+</li>
+<li>If <span class="arithmatex">\(s\)</span> is within the accuracy tolerance then <span class="arithmatex">\(x_{i-1} = h\)</span> and quit.</li>
+<li>
+<div class="arithmatex">\[z = \mathbf{M^{-1}} s\]</div>
+</li>
+<li>
+<div class="arithmatex">\[t = \mathbf{A}z\]</div>
+</li>
+<li>
+<div class="arithmatex">\[\omega = (t, s) / (t, t)\]</div>
+</li>
+<li>
+<div class="arithmatex">\[x_i = h + \omega z\]</div>
+</li>
+<li>
+<div class="arithmatex">\[r_i = s - \omega t\]</div>
+</li>
+<li>If <span class="arithmatex">\(r_i\)</span> is within the accuracy tolerance then quit.</li>
+<li>
+<div class="arithmatex">\[\rho_i = (\hat{r}_0, r_i)\]</div>
+</li>
+<li>
+<div class="arithmatex">\[\beta = (\rho_i / \rho_{i-1}) (\alpha / \omega)\]</div>
+</li>
+<li>
+<div class="arithmatex">\[p_i = r_i + \beta (p_{i-1} - \omega v)\]</div>
+</li>
 </ol>
 </li>
 </ol>
@@ -1756,12 +1769,6 @@
 </span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="nb">export</span><span class="w"> </span><span class="nv">OMP_NUM_THREADS</span><span class="o">=</span><span class="m">48</span>
 </span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>mpirun<span class="w"> </span>-np<span class="w"> </span><span class="m">2</span><span class="w"> </span>./bicgstab_solver
 </span></code></pre></div>
-<p><strong>数据文件</strong>：
-- 测试数据位于 <code>/river/hpc101/2025/lab4/data</code>
-- 可通过 <code>ln -s /river/hpc101/2025/lab4/data data</code> 引用
-- 提交时请勿包含数据文件</p>
-<h2 id="_15">📄 许可证</h2>
-<p>本项目采用 MIT License 开源协议。</p>
 <hr />
 <p><strong>作者</strong>: 苏易文 (学号: 3240103466)<br />
 <strong>课程</strong>: 高性能计算 - 浙江大学<br />
@@ -1833,6 +1840,10 @@
     
     
       <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

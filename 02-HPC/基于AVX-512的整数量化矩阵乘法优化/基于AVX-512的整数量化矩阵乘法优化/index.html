@@ -1182,48 +1182,6 @@
         <li class="md-nav__item">
   <a href="#_17" class="md-nav__link">
     <span class="md-ellipsis">
-      📚 实验思考题解答
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="📚 实验思考题解答">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-numpynone" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. NumPy向量化中None的作用
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. 高级索引的广播机制
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-intel" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. 矩阵转置算法中的Intel指令
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_18" class="md-nav__link">
-    <span class="md-ellipsis">
       🏆 关键收获
     </span>
   </a>
@@ -1231,7 +1189,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_19" class="md-nav__link">
+  <a href="#_18" class="md-nav__link">
     <span class="md-ellipsis">
       📧 联系信息
     </span>
@@ -1624,48 +1582,6 @@
         <li class="md-nav__item">
   <a href="#_17" class="md-nav__link">
     <span class="md-ellipsis">
-      📚 实验思考题解答
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="📚 实验思考题解答">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-numpynone" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. NumPy向量化中None的作用
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. 高级索引的广播机制
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-intel" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. 矩阵转置算法中的Intel指令
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_18" class="md-nav__link">
-    <span class="md-ellipsis">
       🏆 关键收获
     </span>
   </a>
@@ -1673,7 +1589,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_19" class="md-nav__link">
+  <a href="#_18" class="md-nav__link">
     <span class="md-ellipsis">
       📧 联系信息
     </span>
@@ -1713,7 +1629,6 @@
 <li>理解数据重排（Data Reshaping）在SIMD优化中的关键作用</li>
 <li>探索Intel AMX指令集在矩阵运算中的革命性优势</li>
 <li>分析不同硬件加速技术的性能特征和适用场景</li>
-<li>学习NumPy向量化编程的最佳实践</li>
 </ul>
 <h2 id="_3">⚙️ 技术栈与环境</h2>
 <h3 id="_4">硬件要求</h3>
@@ -1951,36 +1866,18 @@
 <li><strong>二维处理</strong>: 直接操作二维数据瓦片</li>
 <li><strong>高效流水</strong>: TMUL单元提供极高计算吞吐量</li>
 </ul>
-<h2 id="_17">📚 实验思考题解答</h2>
-<h3 id="1-numpynone">1. NumPy向量化中None的作用</h3>
-<p>在<code>bilinear_interp_vectorized.py</code>中，<code>None</code>用于增加维度，为广播机制做准备：
-- <code>x_mul = (x - x_idx)[:,:,:,None]</code> 将形状从<code>(N,H2,W2)</code>变为<code>(N,H2,W2,1)</code>
-- 支持与<code>(N,H2,W2,C)</code>形状的数组进行广播运算</p>
-<h3 id="2">2. 高级索引的广播机制</h3>
-<p><code>a[n_idx, x_idx, y_idx]</code>通过广播实现批量索引：
-- <strong>最终形状</strong>: <code>[N, H2, W2, C]</code>
-- <strong>作用机制</strong>: 三个索引数组通过广播组合成坐标网格
-- <strong>效果</strong>: 并行检索所有对应位置的像素数据</p>
-<h3 id="3-intel">3. 矩阵转置算法中的Intel指令</h3>
-<p>详细的指令解析包括：
-- <code>_mm256_loadu_epi64</code>: 非对齐加载256位数据
-- <code>_mm512_castsi256_si512</code>: 类型转换（256位→512位）
-- <code>_mm512_inserti64x4</code>: 插入256位数据到512位向量
-- <code>_mm512_mask_permutexvar_epi64</code>: 掩码控制的可变置换</p>
-<h2 id="_18">🏆 关键收获</h2>
+<h2 id="_17">🏆 关键收获</h2>
 <ol>
 <li><strong>硬件理解</strong>: 深入理解了现代CPU的向量化和矩阵计算单元</li>
 <li><strong>优化策略</strong>: 掌握了从数据布局到指令选择的系统性优化方法</li>
 <li><strong>性能分析</strong>: 学会了如何量化和分析不同优化技术的效果</li>
 <li><strong>实践能力</strong>: 提升了使用底层指令进行高性能计算的实践技能</li>
 </ol>
-<h2 id="_19">📧 联系信息</h2>
+<h2 id="_18">📧 联系信息</h2>
 <p>如有问题或建议，请联系：
 - <strong>姓名</strong>: 苏易文
 - <strong>学号</strong>: 3240103466
 - <strong>日期</strong>: 2025年7月6日</p>
-<hr />
-<p><strong>注</strong>: 本项目展示了从基础优化到硬件加速的完整技术路径，为高性能计算和深度学习加速提供了重要的技术参考。</p>
 
 
 
@@ -2048,6 +1945,10 @@
     
     
       <script src="../../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>
